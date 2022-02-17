@@ -1,0 +1,15 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: rgb(231, 231, 231);
+}
+
+nav {
+	padding: 25px;
+	justify-content: space-between;
+	border-radius: 0 0 25px 25px;
+	-webkit-border-radius: 0 0 25px 25px;
+	-moz-border-radius: 0 0 25px 25px;
+	-ms-border-radius: 0 0 25px 25px;
+	-o-border-radius: 0 0 25px 25px;
+}
