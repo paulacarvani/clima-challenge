@@ -22,35 +22,26 @@
 <body>
 
   <!-- load -->
-  <div class="container_loader">
+  <div class="container_loader m-0">
     <div class="loader"></div>
   </div>
-  <div class="container_loader2">
+  <div class="container_loader2 m-0">
     <div class="loader2"></div>
   </div>
 
-  <nav class="navbar navbar-light bg-light justify-content-between">
-    <a class="navbar-brand">News</a>
-    <form class="form-inline d-flex" method="post" id="post" action="/home">
-      <input class="form-control mr-sm-2 rounded-ts" type="search" placeholder="Search" aria-label="Search" name="city">
-      <button class="btn btn-dark my-2 my-sm-0 m-2" type="submit" name="button">Search</button>
-    </form>
-  </nav>
-
-  <div class="container pt-4">
-    {% block content %}
-    {% endblock content %}
-  </div>
-  <div class="container pt-4">
-    <div class="row justify-content-center">
-      <div class="col-md-8 bg-white rounded d-flex justify-content-center align-items-center">
-        <h1 class="p-1">Breaking News</h1>
-        <br>
+  <img src="../static/img/2901788.jpg" class="img-fluid font" alt="Responsive image">
+  <div class="container ps">
+    <div class="row">
+      <div class="col bg-white rounded-ts pt-3">
+        <form class="form-inline d-flex pb-3 pl-5 pr-5" method="post" id="post" action="/home">
+          <input class="form-control mr-sm-2 border-0" type="search" placeholder="Search" aria-label="Search"
+            name="city">
+          <button class="btn btn-dark my-2 my-sm-0 m-2" type="submit" name="button">Search</button>
+        </form>
       </div>
     </div>
   </div>
-  {% block news %}
-  {% endblock news %}
+
 </body>
 
 </html>

@@ -1,7 +1,22 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: rgb(231, 231, 231);
+	background: rgb(238, 238, 238);
+}
+
+body::-webkit-scrollbar {
+	width: 9px;
+	background: rgba(255, 255, 255, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: rgb(34, 34, 34);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-right: 2px solid rgba(34, 34, 34, 0.274);
 }
 
 nav {
@@ -12,4 +27,26 @@ nav {
 	-moz-border-radius: 0 0 25px 25px;
 	-ms-border-radius: 0 0 25px 25px;
 	-o-border-radius: 0 0 25px 25px;
+}
+
+.ps {
+	padding-top: 20rem;
+	position: sticky;
+}
+
+.rounded-ts {
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+}
+
+.font {
+	position: fixed;
+	width: 100vw;
+    height: 115vh;
+	display: flex;
+	align-items: center;
+    justify-content: center;
 }
