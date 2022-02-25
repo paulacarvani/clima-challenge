@@ -32,6 +32,14 @@
     <div class="loader2"></div>
   </div>
 
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <button class="btn btn-dark my-2 my-sm-0 m-2" type="button"><a href='{{ url_for("admin") }}'
+        alt='Broken Link'>Login</a></button>
+
+    <button class="btn btn-dark my-2 my-sm-0 m-2" type="button"><a href='{{ url_for("index") }}'
+        alt='Broken Link'>Home</a></button>
+  </nav>
+
   {% block page %}
   {% endblock page %}
 </body>

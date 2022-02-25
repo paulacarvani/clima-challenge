@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, request
+from flask import render_template, request, url_for
 from flask_mysqldb import MySQL
 
 from api import getInfo, getNews, render
@@ -44,8 +44,6 @@ def login_admin():
     if check_user == 'admin':
         user = request.form['name']
         password = request.form['password']
-
-
 
         return render_template('boards.html', check_user=check_user)
     elif check_user == 'guest':
