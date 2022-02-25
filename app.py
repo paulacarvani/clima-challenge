@@ -8,10 +8,15 @@ from api import getInfo, getNews, render
 app = Flask(__name__)
 
 # Connection MySQL
-app.config['MySQL_'] = ''
-app.config['MySQL_'] = ''
-app.config['MySQL_'] = ''
-app.config['MySQL_'] = ''
+mysql = MySQL()
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'clima-challenge'
+cur = mysql.connection.cursor()
+
+# Start Connection MySQL
+mysql.init_app(app)
 
 
 @app.route('/', methods=['GET'])
