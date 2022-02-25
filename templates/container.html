@@ -1,0 +1,37 @@
+{% extends "./base.html" %}
+
+{% block imports %}
+<link rel="stylesheet" href="../static/css/style.css">
+{% endblock imports %}
+
+{% block importsjs %}
+<script src="../static/js/loader.js"></script>
+{% endblock importsjs %}
+
+{% block page %}
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">News</a>
+  <form class="form-inline d-flex" method="post" id="post" action="/home">
+    <input class="form-control mr-sm-2 rounded-ts" type="search" placeholder="Search" aria-label="Search" name="city">
+    <button class="btn btn-dark my-2 my-sm-0 m-2" type="submit" name="button">Search</button>
+  </form>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      {% block r %}
+      {% endblock r %}
+    </div>
+    <div class="col-6">
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <div class="col">
+      {% block l %}
+      {% endblock l %}
+    </div>
+  </div>
+</div>
+{% endblock page %}
