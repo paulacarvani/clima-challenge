@@ -5,6 +5,7 @@ Contains the class DBStorage
 
 import models
 from models.user import User
+from models.base_model import BaseModel, Base
 from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
