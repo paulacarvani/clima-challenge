@@ -1,6 +1,6 @@
 from flask import Flask
-from flask import render_template, request, url_for
-from flask_mysqldb import MySQL
+from flask import render_template, request, url_for, redirect, g, session
+from flaskext.mysql import MySQL
 
 from api import getInfo, getNews, render
 
@@ -8,15 +8,15 @@ from api import getInfo, getNews, render
 app = Flask(__name__)
 
 # Connection MySQL
-mysql = MySQL()
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'clima-challenge'
-cur = mysql.connection.cursor()
 
 # Start Connection MySQL
+mysql = MySQL()
 mysql.init_app(app)
+cur = mysql.connect().cursor()
 
 
 @app.route('/', methods=['GET'])
